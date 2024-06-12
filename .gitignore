@@ -1,0 +1,11 @@
+## Packages
+node_modules
+
+## Environment file
+.env
+
+## Lock file
+package-lock.json
+
+## Generated output folder
+dist
