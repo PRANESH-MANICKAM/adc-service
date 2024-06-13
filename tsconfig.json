@@ -9,7 +9,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@configurations/*": ["configurations/*"],
+      "@domain/*": ["domain/*"],
+      "@helpers/*": ["helpers/*"],
+      "@paths/*": ["paths/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
