@@ -1,6 +1,5 @@
 // Dynamic imports
 import healthCheckRoute from "./health-check";
-import registrationRoute from "./registration";
-import loginRoute from "./login";
+import authenticationRoute from "./authentication";
 
-export { healthCheckRoute, registrationRoute, loginRoute };
+export { healthCheckRoute, authenticationRoute };
