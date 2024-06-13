@@ -1,7 +1,7 @@
 // Static imports
 import { Router } from "express";
 // Dynamic imports
-import { successResponse } from "@helpers/index";
+import { successResponse } from "../helpers";
 
 const healthCheckRoute = () => {
   const router = Router();
