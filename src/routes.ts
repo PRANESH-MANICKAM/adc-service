@@ -1,7 +1,7 @@
 // static imports
 import { Router } from "express";
 // Dynamic imports
-import { healthCheckRoute } from "@paths/index";
+import { healthCheckRoute } from "./paths";
 
 const Routes = () => {
   const router = Router();

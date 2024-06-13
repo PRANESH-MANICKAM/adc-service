@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import * as dotEnv from "dotenv-safe";
 // Dynamic imports
 import Routes from "./routes";
-import knex from "@configurations/knex/index";
+import knex from "./configurations/knex/index";
 
 dotEnv.config();
 knex.authenticate();
