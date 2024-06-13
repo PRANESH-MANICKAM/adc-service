@@ -5,8 +5,10 @@ import bodyParser from "body-parser";
 import * as dotEnv from "dotenv-safe";
 // Dynamic imports
 import Routes from "./routes";
+import knex from "./configurations/knex/index";
 
 dotEnv.config();
+knex.authenticate();
 const app = express();
 
 const basePath = process.env.BASE_PATH as string;
