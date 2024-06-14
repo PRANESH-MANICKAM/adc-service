@@ -6,6 +6,7 @@ import * as dotEnv from "dotenv-safe";
 // Dynamic imports
 import Routes from "./routes";
 import knex from "./configurations/knex/index";
+import authorization from "./helpers/authorization";
 
 dotEnv.config();
 knex.authenticate();
@@ -16,6 +17,7 @@ const port = process.env.PORT as string;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(authorization);
 app.use(basePath, Routes());
 
 app.listen(port, () => {
