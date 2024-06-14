@@ -25,3 +25,9 @@ export interface ConstructCredentialsPayload {
   phone_number: string;
   password: string;
 }
+
+export interface loginPayload {
+  phone_number: string;
+  password: string;
+}
+

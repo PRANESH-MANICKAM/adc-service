@@ -3,14 +3,22 @@ import { Response } from "express";
 
 export interface ReturnResponse {
   type: "success" | "failure";
-  message: any;
+  message?: any;
+  data?: any;
 }
 
 const successResponse = (res: Response, data: any) => {
   const statusCode: number = 200;
-  const response: ReturnResponse = {
+  let response: ReturnResponse;
+  if (typeof data === "string") {
+    response = {
+      type: "success",
+      message: data,
+    };
+  }
+  response = {
     type: "success",
-    message: data,
+    data,
   };
   res.status(statusCode).json(response);
 };
